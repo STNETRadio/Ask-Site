@@ -1,0 +1,35 @@
+/* รีเซ็ตพื้นฐาน */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "IBM Plex Sans Thai", serif;
+}
+
+/* การจัดการ iframe */
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px); /* ลดความสูงเพื่อให้เว้นที่สำหรับ footer */
+  border: none;
+}
+
+/* Footer */
+.footer {
+  background-color: #000; /* พื้นหลังสีดำ */
+  color: #fff; /* ตัวอักษรสีขาว */
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 400; /* น้ำหนักตัวอักษรปกติ */
+  position: fixed; /* ตรึง footer ไว้ด้านล่าง */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer span {
+  font-weight: 600; /* เน้นข้อความบางส่วน */
+}
