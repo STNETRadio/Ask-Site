@@ -3,25 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - Page Not Found</title>
-  <!-- Favicon -->
+  <title>404 Not Found</title>
   <link rel="icon" href="https://s3.ap-southeast-1.amazonaws.com/files.stnetradio.com/logo/fav.ico" type="image/x-icon">
-  <!-- Link Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Link External CSS -->
-  <link rel="stylesheet" href="404.css">
+  <style>
+    /* General styles */
+    body {
+      margin: 0;
+      padding: 50px 20px; /* เพิ่ม padding บน */
+      font-family: 'Source Sans 3', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      background-color: #ffffff;
+      color: #000000;
+      transition: background-color 0.3s, color 0.3s;
+      box-sizing: border-box; /* เพื่อให้ padding ไม่กระทบขนาดของ body */
+    }
+
+    h1 {
+      font-size: 6rem;
+      font-weight: 900;
+      margin: 0;
+      color: #FF0000;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 20px 0;
+      letter-spacing: 1px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Button styles */
+    a.btn {
+      background-color: #FF0000;
+      color: #ffffff;
+    }
+
+    a.btn:hover {
+      opacity: 0.8;
+    }
+
+    /* Dark mode styles */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #000000;
+        color: #ffffff;
+      }
+
+      a.btn {
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      a.btn:hover {
+        background-color: #cccccc;
+      }
+    }
+
+    /* Footer styles */
+    footer {
+      margin-top: auto;
+      padding: 10px 0;
+      width: 100%;
+      background-color: #000000;
+      color: #ffffff;
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      font-weight: bold;
+    }
+
+    footer span.italic {
+      font-style: italic;
+      font-weight: normal;
+    }
+  </style>
 </head>
 <body>
-  <div>
-    <h1>404</h1>
-    <p>Sorry, the page you're looking for cannot be found.</p>
-    <a href="https://stnetradio.com">Go Back to Home</a>
-  </div>
-  <!-- Footer -->
+  <h1>404</h1>
+  <p>PAGE NOT FOUND</p>
+  <a href="https://stnetradio.com" class="btn">GO BACK TO HOME</a>
+
   <footer>
-    © 2025 <span class="bold-italic">STNET</span> <span class="bold">Radio</span>. All Rights Reserved.
+    © 2025 <span>STNET</span> <span class="italic">Radio</span>. All Rights Reserved.
   </footer>
 </body>
 </html>
