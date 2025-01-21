@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 Not Found</title>
+  <title>Page Not Found | STNET Radio</title>
   <link rel="icon" href="https://s3.ap-southeast-1.amazonaws.com/files.stnetradio.com/logo/fav.ico" type="image/x-icon">
   <style>
     /* General reset */
@@ -68,10 +68,17 @@
       color: #FF0000;
     }
 
+    /* Message below the button */
+    .small-message {
+      font-size: 0.85rem;
+      color: #666666;
+      margin-top: 10px;
+    }
+
     /* Dark mode styles */
     @media (prefers-color-scheme: dark) {
       body {
-        background-color: #1a1a1a;
+        background-color: #000000;
         color: #ffffff;
       }
 
@@ -85,14 +92,27 @@
         background-color: #000000;
         color: #ffffff;
       }
+
+      .small-message {
+        color: #ffffff; /* เปลี่ยนเป็นสีขาวในโหมดมืด */
+      }
+
+      footer {
+        color: #ffffff;
+      }
+    }
+
+    /* Light mode styles */
+    @media (prefers-color-scheme: light) {
+      footer {
+        color: #000000;
+      }
     }
 
     /* Footer styles */
     footer {
       margin-top: auto;
       width: 100%;
-      background-color: #000000;
-      color: #ffffff;
       font-size: 0.9rem;
       padding: 15px 0;
       text-align: center;
@@ -109,9 +129,10 @@
   </style>
 </head>
 <body>
-  <h1>PAGE NOT FOUND</h1>
+  <h1>Oops!</h1>
   <p>The page you are looking for does not exist or the questionnaire is not open yet.</p>
   <a href="https://stnetradio.com" class="btn">Go Back to Home</a>
+  <p class="small-message">When you proceed, the website will redirect you to stnetradio.com</p>
 
   <footer>
     © 2025 <span class="italic">STNET</span> <span>Radio</span>. All Rights Reserved.
