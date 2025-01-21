@@ -8,9 +8,9 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f9f9f9;
   color: #333;
   text-align: center;
+  background-color: #f9f9f9; /* Default background for Light Mode */
 }
 
 h1 {
@@ -61,4 +61,26 @@ footer span.bold {
   font-weight: 600;
   font-style: normal;
   color: #333;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212; /* Dark background */
+    color: #ddd; /* Light text for dark background */
+  }
+
+  footer {
+    color: #aaa;
+  }
+
+  a {
+    color: #61dafb;
+    border-color: #61dafb;
+  }
+
+  a:hover {
+    background-color: #61dafb;
+    color: #121212;
+  }
 }
