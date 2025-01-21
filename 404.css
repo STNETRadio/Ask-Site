@@ -11,6 +11,7 @@ body {
   background-color: #ff0000; /* Background for the 404 page */
   color: #fff;
   text-align: center;
+  text-transform: uppercase; /* Make all text uppercase except for footer */
 }
 
 h1 {
@@ -33,6 +34,7 @@ a {
   border-radius: 5px;
   border: 2px solid transparent;
   transition: all 0.3s ease;
+  text-transform: uppercase; /* Make the button text uppercase */
 }
 
 /* Default: Light Mode */
@@ -79,6 +81,7 @@ footer {
   font-weight: 300;
   color: #aaa;
   background-color: #000; /* Black background for footer */
+  text-transform: none; /* Footer text stays normal case */
 }
 
 footer span.bold-italic {
