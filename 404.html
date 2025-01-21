@@ -6,10 +6,15 @@
   <title>404 Not Found</title>
   <link rel="icon" href="https://s3.ap-southeast-1.amazonaws.com/files.stnetradio.com/logo/fav.ico" type="image/x-icon">
   <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     /* General styles */
     body {
-      margin: 0;
-      padding: 50px 20px; /* เพิ่ม padding บน */
       font-family: 'Source Sans 3', sans-serif;
       display: flex;
       flex-direction: column;
@@ -19,8 +24,8 @@
       text-align: center;
       background-color: #ffffff;
       color: #000000;
+      padding: 50px 20px;
       transition: background-color 0.3s, color 0.3s;
-      box-sizing: border-box; /* เพื่อให้ padding ไม่กระทบขนาดของ body */
     }
 
     h1 {
@@ -78,11 +83,12 @@
     /* Footer styles */
     footer {
       margin-top: auto;
-      padding: 10px 0;
       width: 100%;
       background-color: #000000;
       color: #ffffff;
       font-size: 0.9rem;
+      padding: 10px 0;
+      text-align: center;
     }
 
     footer span {
@@ -91,7 +97,7 @@
 
     footer span.italic {
       font-style: italic;
-      font-weight: normal;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -101,7 +107,7 @@
   <a href="https://stnetradio.com" class="btn">GO BACK TO HOME</a>
 
   <footer>
-    © 2025 <span>STNET</span> <span class="italic">Radio</span>. All Rights Reserved.
+    © 2025 <span class="italic">STNET</span> <span>Radio</span>. All Rights Reserved.
   </footer>
 </body>
 </html>
