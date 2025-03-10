@@ -5,29 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Questionnaire | STNET Radio</title>
   <link rel="icon" href="https://s3.ap-southeast-1.amazonaws.com/files.stnetradio.com/logo/fav.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     
     body {
       font-family: 'Poppins', sans-serif;
       background: #fff;
       color: #333;
       line-height: 1.6;
-      padding: 0 1rem;
     }
     
     header {
-      padding: 1rem 0;
+      padding: 1rem 2rem;
       border-bottom: 1px solid #eee;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
     }
     
     .brand {
@@ -39,7 +33,6 @@
     nav ul {
       display: flex;
       list-style: none;
-      flex-wrap: wrap;
     }
     
     nav li {
@@ -58,7 +51,7 @@
     
     .banner {
       background-color: #f5f5f5;
-      padding: 1rem 0;
+      padding: 1rem 2rem;
       text-align: center;
       border-bottom: 1px solid #eee;
     }
@@ -85,7 +78,7 @@
     }
     
     .hero {
-      padding: 2rem 0;
+      padding: 4rem 2rem;
       text-align: center;
     }
     
@@ -98,43 +91,37 @@
       font-size: 1rem;
       margin-bottom: 2rem;
       max-width: 600px;
-      margin: 0 auto;
-      padding: 0 1rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .questionnaire {
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .questionnaire a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      background: #0070f3;
+      color: #fff;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    
+    .questionnaire a:hover {
+      background: #005bb5;
     }
     
     footer {
-      padding: 1rem 0;
+      padding: 1rem 2rem;
       text-align: center;
       border-top: 1px solid #eee;
       margin-top: 2rem;
       font-size: 0.9rem;
       color: #666;
-    }
-    
-    /* Mobile Styles */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 1rem;
-      }
-      
-      nav li {
-        margin: 0.5rem 0;
-      }
-      
-      .hero h1 {
-        font-size: 2rem;
-      }
-      
-      .hero p {
-        font-size: 0.9rem;
-      }
     }
   </style>
 </head>
@@ -144,15 +131,15 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="https://stnetradio.com" target="_blank">About</a></li>
-        <li><a href="https://support.stnetradio.com" target="_blank">Support</a></li>
+        <li><a href="https://stnetradio.com">About</a></li>
+        <li><a href="https://support.stnetradio.com">Support</a></li>
       </ul>
     </nav>
   </header>
   
   <section class="banner">
     <p>This is a demo of the new home page for STNET Radio.</p>
-    <a href="https://stnetradio.com" class="banner-btn">Go to old Version</a>
+    <a href="https://stnetradio.com" class="banner-btn" >Go to old Version</a>
   </section>
   
   <section class="hero">
