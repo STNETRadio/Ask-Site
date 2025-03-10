@@ -17,12 +17,14 @@
       font-family: "IBM Plex Sans Thai", serif;
       background: #fff;
       color: #333;
+      height: 100%;
     }
     
     /* Content Section */
     .content {
       padding: 2rem;
       text-align: center;
+      min-height: calc(100% - 60px); /* Adjusting for footer height */
     }
     
     /* Tally Embed */
@@ -32,7 +34,7 @@
       border: none;
     }
     
-    /* Footer - Copyright Style */
+    /* Footer - Fixed Position */
     footer {
       background-color: #f5f5f5;
       color: #666;
@@ -40,7 +42,10 @@
       padding: 1rem 0;
       font-size: 0.875rem;
       border-top: 1px solid #ddd;
-      margin-top: 2rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
     }
     
     footer p {
