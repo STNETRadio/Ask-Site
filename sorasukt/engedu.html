@@ -18,13 +18,24 @@
       background: #fff;
       color: #333;
       height: 100%;
+      display: flex;
+      flex-direction: column;
     }
     
     /* Content Section */
     .content {
-      padding: 2rem;
-      text-align: center;
-      min-height: calc(100% - 60px); /* Adjusting for footer height */
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    
+    /* Tally Embed - Full Page */
+    .tally-embed {
+      width: 100%;
+      height: 100vh;
+      border: none;
     }
     
     /* Footer - Fixed Position */
@@ -47,13 +58,22 @@
   </style>
   <!-- Tally Embed Script -->
   <script async src="https://tally.so/widgets/embed.js"></script>
+  <script>
+    console.log("Page Loaded");
+    window.addEventListener("load", function() {
+      console.log("Tally embed should now be visible");
+    });
+  </script>
 </head>
 <body>
   <!-- Content Section with Tally Embed -->
+  <section class="content">
     <iframe class="tally-embed" 
       src="https://tally.so/r/wgJa6J?transparentBackground=1" 
-      title="แบบสอบถามสำหรับการเรียนต่อ">
+      title="แบบสอบถามสำหรับการเรียนต่อ"
+      onload="console.log('Tally embed loaded successfully')">
     </iframe>
+  </section>
   
   <!-- Footer -->
   <footer>
