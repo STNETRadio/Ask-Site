@@ -3,31 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ask | STNET Radio</title>
+  <title>STNET Radio | Home</title>
   <link rel="icon" href="https://s3.ap-southeast-1.amazonaws.com/files.stnetradio.com/logo/fav.ico" type="image/x-icon">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
     body {
-      font-family: 'Poppins', system-ui, sans-serif;
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
       color: #333;
       line-height: 1.6;
-      background: linear-gradient(135deg, #fff 0%, #f5f5f5 100%);
     }
     
-    /* Top Banner (now on top of the menu) */
-    .top-banner {
+    header {
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    nav li {
+      margin-left: 1.5rem;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    
+    nav a:hover {
+      color: #555;
+    }
+    
+    .banner {
       background-color: #f5f5f5;
       padding: 1rem 2rem;
       text-align: center;
       border-bottom: 1px solid #eee;
     }
     
+    .banner p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: #666;
+    }
+    
     .banner-btn {
       display: inline-block;
-      margin-top: 0.5rem;
       padding: 0.5rem 1rem;
       text-decoration: none;
       background: #fff;
@@ -41,593 +77,78 @@
       background: #eaeaea;
     }
     
-    header {
-      background-color: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .header-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-    
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-    
-    .logo img {
-      height: 40px;
-    }
-    
-    .logo-text {
-      font-weight: 800;
-      font-size: 1.5rem;
-      margin-left: 0.5rem;
-    }
-    
-    .logo-text span {
-      color: #ff0000;
-    }
-    
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1513829596324-4bb2800c5efb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-      background-size: cover;
-      background-position: center;
-      color: white;
+      padding: 4rem 2rem;
       text-align: center;
-      padding: 6rem 1rem;
     }
     
     .hero h1 {
       font-size: 2.5rem;
-      font-weight: 800;
       margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: -1px;
     }
     
     .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 1.5rem;
-    }
-    
-    .hero-btn {
-      display: inline-block;
-      padding: 0.9rem 2rem;
-      font-weight: 600;
       font-size: 1rem;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 50px;
-      background: linear-gradient(90deg, #ff0000, #ff5050);
-      color: #fff;
-      letter-spacing: 1px;
-      box-shadow: 0 4px 15px rgba(255,0,0,0.2);
-      transition: all 0.3s;
-    }
-    
-    .hero-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(255,0,0,0.3);
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 4rem 1.5rem;
-    }
-    
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
       margin-bottom: 2rem;
-      text-align: center;
-      position: relative;
-    }
-    
-    .section-title::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, #ff0000, #ff6b6b);
-      margin: 0.8rem auto;
-    }
-    
-    .featured-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    
-    .content-card {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    
-    .content-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    }
-    
-    .card-image {
-      height: 180px;
-      overflow: hidden;
-    }
-    
-    .card-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s;
-    }
-    
-    .content-card:hover .card-image img {
-      transform: scale(1.05);
-    }
-    
-    .card-content {
-      padding: 1.5rem;
-    }
-    
-    .card-content h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .card-content p {
-      color: #666;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-    
-    .card-link {
-      display: inline-block;
-      color: #ff0000;
-      font-weight: 600;
-      text-decoration: none;
-      position: relative;
-    }
-    
-    .card-link::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: #ff0000;
-      transition: width 0.3s;
-    }
-    
-    .card-link:hover::after {
-      width: 100%;
-    }
-    
-    /* Podcast Section */
-    .podcast-section {
-      background-color: #f9f9f9;
-      padding: 4rem 0;
-    }
-    
-    .podcasts {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    
-    .podcast-card {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-    }
-    
-    .podcast-card:hover {
-      transform: translateY(-5px);
-    }
-    
-    .podcast-image {
-      height: 180px;
-      position: relative;
-    }
-    
-    .podcast-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 50px;
-      height: 50px;
-      background-color: rgba(255,0,0,0.8);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    
-    .play-button:hover {
-      background-color: #ff0000;
-    }
-    
-    .play-icon {
-      width: 0;
-      height: 0;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      border-left: 15px solid white;
-      margin-left: 3px;
-    }
-    
-    .podcast-content {
-      padding: 1.5rem;
-    }
-    
-    .podcast-content h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .podcast-content .meta {
-      color: #888;
-      font-size: 0.8rem;
-      margin-bottom: 0.75rem;
-    }
-    
-    /* Newsletter Section */
-    .newsletter {
-      text-align: center;
-      padding: 4rem 0;
-      background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
-    }
-    
-    .newsletter-container {
       max-width: 600px;
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
     }
     
-    .newsletter p {
-      margin-bottom: 1.5rem;
+    .questionnaire {
+      padding: 2rem;
+      text-align: center;
     }
     
-    .newsletter-form {
-      display: flex;
-      margin: 0 auto;
-      max-width: 500px;
+    .questionnaire a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      background: #0070f3;
+      color: #fff;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: background 0.3s;
     }
     
-    .newsletter-form input {
-      flex: 1;
-      padding: 0.8rem 1rem;
-      border: 1px solid #ddd;
-      border-radius: 50px 0 0 50px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.9rem;
-      outline: none;
-    }
-    
-    .newsletter-form button {
-      padding: 0 1.5rem;
-      background: linear-gradient(90deg, #ff0000, #ff5050);
-      color: white;
-      border: none;
-      border-radius: 0 50px 50px 0;
-      font-weight: 600;
-      cursor: pointer;
-      transition: opacity 0.3s;
-    }
-    
-    .newsletter-form button:hover {
-      opacity: 0.9;
+    .questionnaire a:hover {
+      background: #005bb5;
     }
     
     footer {
-      background-color: #222;
-      color: #fff;
-      padding: 3rem 0 1.5rem;
-    }
-    
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      padding: 0 1.5rem;
-    }
-    
-    .footer-logo {
-      font-weight: 800;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-    
-    .footer-logo span {
-      color: #ff5050;
-    }
-    
-    .footer-about p {
-      color: #bbb;
-      font-size: 0.9rem;
-      margin-bottom: 1.5rem;
-    }
-    
-    .footer-heading {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 1.25rem;
-      position: relative;
-    }
-    
-    .footer-heading::after {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 3px;
-      background: #ff5050;
-      margin-top: 0.5rem;
-    }
-    
-    .footer-links {
-      list-style: none;
-    }
-    
-    .footer-links li {
-      margin-bottom: 0.75rem;
-    }
-    
-    .footer-links a {
-      color: #bbb;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    
-    .footer-links a:hover {
-      color: #fff;
-    }
-    
-    .copyright {
+      padding: 1rem 2rem;
       text-align: center;
-      padding-top: 2rem;
+      border-top: 1px solid #eee;
       margin-top: 2rem;
-      border-top: 1px solid #444;
-      color: #888;
-      font-size: 0.85rem;
-    }
-    
-    .copyright span.italic {
-      font-style: italic;
-    }
-    
-    .copyright span {
-      font-weight: 600;
-    }
-    
-    /* Media queries */
-    @media screen and (max-width: 768px) {
-      .header-container {
-        padding: 1rem;
-      }
-      
-      .hero {
-        padding: 4rem 1rem;
-      }
-      
-      .hero h1 {
-        font-size: 2rem;
-      }
-      
-      .section-title {
-        font-size: 1.8rem;
-      }
-      
-      .newsletter-form {
-        flex-direction: column;
-      }
-      
-      .newsletter-form input {
-        border-radius: 50px;
-        margin-bottom: 1rem;
-      }
-      
-      .newsletter-form button {
-        border-radius: 50px;
-        padding: 0.8rem;
-      }
-    }
-    
-    /* Dark mode */
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-        color: #f5f5f5;
-      }
-      
-      header {
-        background-color: #222;
-      }
-      
-      .content-card, .podcast-card {
-        background-color: #2a2a2a;
-      }
-      
-      .card-content h3, .podcast-content h3 {
-        color: #f5f5f5;
-      }
-      
-      .card-content p {
-        color: #bbb;
-      }
-      
-      .podcast-section {
-        background-color: #181818;
-      }
-      
-      .newsletter {
-        background: linear-gradient(135deg, #222 0%, #1a1a1a 100%);
-        color: #f5f5f5;
-      }
-      
-      .newsletter-form input {
-        background-color: #333;
-        border-color: #444;
-        color: #f5f5f5;
-      }
-      
-      footer {
-        background-color: #111;
-      }
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <!-- Top Banner -->
-  <section class="top-banner">
-    <p>This is a demo of new home page from STNET Radio.</p>
+  <header>
+    <div class="brand">STNET Radio</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="https://stnetradio.com" target="_blank">About</a></li>
+        <li><a href="https://support.stnetradio.com" target="_blank">Support</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section class="banner">
+    <p>This is a demo of the new home page for STNET Radio.</p>
     <a href="https://stnetradio.com" class="banner-btn" target="_blank">Go to old Version</a>
   </section>
   
-  <!-- Header -->
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <img src="https://s3.ap-southeast-1.amazonaws.com/files.stnetradio.com/logo/logo.png" alt="STNET Radio Logo">
-        <div class="logo-text">STNET <span>Radio</span></div>
-      </div>
-    </div>
-  </header>
-  
-  <!-- Hero Section -->
   <section class="hero">
     <h1>Welcome to STNET Radio</h1>
-    <p>Your source for the best podcasts, interviews, and educational content.</p>
-    <a href="#featured" class="hero-btn">Explore Now</a>
+    <p>Right now, we don't have any public questionnaires available! If you'd like to fill out a questionnaire, you can simply open questionnaire links from various places such as emails, bulletin boards, social media, and more! 😊</p>
   </section>
   
-  <!-- Featured Content Section -->
-  <section id="featured" class="container">
-    <h2 class="section-title">Featured Content</h2>
-    <div class="featured-content">
-      <div class="content-card">
-        <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Education">
-        </div>
-        <div class="card-content">
-          <h3>ทำไมคุณถึงอยากเรียนครู?</h3>
-          <p>แบบสอบถามจาก LITALK Podcast เพื่อค้นหาแรงบันดาลใจในการเป็นครูของคุณ</p>
-          <a href="https://ask.stnetradio.com/soaqer/whyteacher" class="card-link">ทำแบบสอบถาม</a>
-        </div>
-      </div>
-      
-      <div class="content-card">
-        <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Podcast">
-        </div>
-        <div class="card-content">
-          <h3>Latest Interview</h3>
-          <p>Discover insights from our latest conversation with industry leaders.</p>
-          <a href="https://ask.stnetradio.com/interview/latest" class="card-link">Listen Now</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Latest Podcasts Section -->
-  <section class="podcast-section">
-    <div class="container">
-      <h2 class="section-title">Latest Podcasts</h2>
-      <div class="podcasts">
-        <div class="podcast-card">
-          <div class="podcast-image">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Podcast 1">
-            <div class="play-button">
-              <div class="play-icon"></div>
-            </div>
-          </div>
-          <div class="podcast-content">
-            <h3>Inspiring Educators</h3>
-            <p class="meta">Episode 12 | 30 min</p>
-            <p>Join us as we talk to some of the most influential educators in the industry.</p>
-          </div>
-        </div>
-        <div class="podcast-card">
-          <div class="podcast-image">
-            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Podcast 2">
-            <div class="play-button">
-              <div class="play-icon"></div>
-            </div>
-          </div>
-          <div class="podcast-content">
-            <h3>Future of Teaching</h3>
-            <p class="meta">Episode 8 | 25 min</p>
-            <p>Dive into the latest trends and future prospects of education and teaching.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Newsletter Section -->
-  <section class="newsletter">
-    <div class="newsletter-container">
-      <p>Subscribe to our newsletter for the latest updates.</p>
-      <form class="newsletter-form">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </section>
-  
-  <!-- Footer -->
   <footer>
-    <div class="footer-container">
-      <div class="footer-about">
-        <div class="footer-logo">STNET <span>Radio</span></div>
-        <p>STNET Radio brings you insightful conversations, inspiring stories, and the latest in education. Join our community.</p>
-      </div>
-      <div>
-        <h4 class="footer-heading">Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="https://stnetradio.com" target="_blank">About</a></li>
-          <li><a href="https://support.stnetradio.com" target="_blank">Support</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-heading">Connect</h4>
-        <ul class="footer-links">
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="copyright">
-      <p>&copy; 2025 STNET Radio. All rights reserved.</p>
-    </div>
+    <p>&copy; 2025 STNET Radio. All rights reserved.</p>
   </footer>
 </body>
 </html>
