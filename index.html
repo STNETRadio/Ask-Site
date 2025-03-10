@@ -13,7 +13,7 @@
       font-family: 'Poppins', sans-serif;
       background: #fff;
       color: #333;
-      line-height: 1.6;
+      line-height: 1.4;
     }
     
     header {
@@ -26,7 +26,7 @@
     
     .brand {
       font-size: 1.5rem;
-      font-weight: 600;
+      font-weight: 1000;
       color: #333;
     }
     
@@ -51,7 +51,7 @@
     
     .banner {
       background-color: #f5f5f5;
-      padding: 1rem 2rem;
+      padding: 1rem 1rem;
       text-align: center;
       border-bottom: 1px solid #eee;
     }
@@ -66,10 +66,11 @@
       display: inline-block;
       padding: 0.5rem 1rem;
       text-decoration: none;
+      margin-left: 6px;
       background: #fff;
       color: #333;
-      border: 1px solid #ddd;
-      border-radius: 4px;
+      border: 0px solid #ddd;
+      border-radius: 10px;
       transition: background 0.3s;
     }
     
@@ -83,38 +84,40 @@
     }
     
     .hero h1 {
+      font-weight: bolder;
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
+      
     }
     
     .hero p {
       font-size: 1rem;
-      margin-bottom: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
     }
     
-    .questionnaire {
-      padding: 2rem;
+    .hero p2 {
+      font-size: 1rem;
       text-align: center;
+      margin-bottom: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      border-bottom: 1px solid #eee;
     }
-    
-    .questionnaire a {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      background: #0070f3;
-      color: #fff;
-      border-radius: 4px;
-      font-weight: 500;
-      transition: background 0.3s;
+
+    .hero line {
+      padding: 1rem 2rem;
+      text-align: center;
+      border-top: 2px solid #000000;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #666;
     }
-    
-    .questionnaire a:hover {
-      background: #005bb5;
-    }
-    
+
     footer {
       padding: 1rem 2rem;
       text-align: center;
@@ -126,6 +129,10 @@
   </style>
 </head>
 <body>
+  <section class="banner">
+    <p>This is a demo page. <a href="https://stnetradio.com" class="banner-btn" >Go to Official Website</a></p> 
+  </section>
+
   <header>
     <div class="brand">STNET Radio</div>
     <nav>
@@ -136,11 +143,6 @@
       </ul>
     </nav>
   </header>
-  
-  <section class="banner">
-    <p>This is a demo page.</p>
-    <a href="https://stnetradio.com" class="banner-btn" >Go to Official Website</a>
-  </section>
   
   <section class="hero">
     <h1>Welcome to STNET Radio Questionnaire</h1>
