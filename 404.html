@@ -36,6 +36,11 @@
       text-decoration: none;
     }
     
+    .brand:hover {
+      color: #ff0000;
+      transition: color .5s;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
@@ -54,20 +59,22 @@
     }
     
     nav a:hover {
-      color: #555;
+      color: #ff0000;
+      font-weight: 10000;
+      transition: color 0.5s;
     }
-    
+
     .banner {
-      background-color: #f5f5f5;
+      background-color: #333;
       padding: 1rem;
       text-align: center;
       border-bottom: 1px solid #eee;
     }
     
     .banner p {
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
-      color: #666;
+      font-size: 0.75rem;
+      word-wrap: break-word;
+      color: #eee;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -97,34 +104,40 @@
     }
     
     .hero h1 {
+      color: #ff0000;
+      text-transform: uppercase;
       font-weight: bolder;
-      font-size: 2.2rem;
-      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
     }
+
     
     .hero p {
       font-size: 1rem;
       text-align: center;
       margin-bottom: 1.2rem;
-      max-width: 600px;
+      max-width: 550px;
       margin-left: auto;
       margin-right: auto;
+      word-wrap: break-word;
     }
-    
+
     .hero-btn {
       display: inline-block;
       padding: 0.5rem 1rem;
       text-decoration: none;
       margin-top: 1rem;
-      background: #f5f5f5;
-      color: #333;
+      background: #000;
+      color: #f5f5f5;
       border: 0px solid #ddd;
-      border-radius: 4px;
+      border-radius: 10px;
       transition: background 0.3s;
     }
     
     .hero-btn:hover {
       background: #eaeaea;
+      color: #000;
     }
 
     footer {
@@ -169,30 +182,30 @@
   </style>
 </head>
 <body>
-  <section class="banner">
-    <p>This is a demo page. <a href="https://stnetradio.com" class="banner-btn">Go to Official Website</a></p> 
-  </section>
-
+  
   <header>
     <a href="https://stnetradio.com" class="brand"> STNET Radio </a>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="https://ask.stnetradio.com">Home</a></li>
         <li><a href="https://stnetradio.com">About</a></li>
         <li><a href="https://support.stnetradio.com">Support</a></li>
       </ul>
     </nav>
   </header>
   
+  <section class="banner">
+    <p>This page may have been moved or deleted. If you typed the URL directly, please make sure the spelling is correct.</p>
+  </section>
+
   <section class="hero">
     <h1>Page Not Found</h1>
-    <p>We apologize, but the requested page cannot be found or the questionnaire is currently unavailable.</p>
-    <p>This page may have been moved or deleted. If you typed the URL directly, please make sure the spelling is correct.</p>
-    <a href="index.html" class="hero-btn">Return to Homepage</a>
+    <p>We apologize, the requested page cannot be found or the questionnaire is currently unavailable.</p>
+    <a href="https://ask.stnetradio.com" class="hero-btn">Return to Homepage</a>
   </section>
   
   <footer>
-    <p>&copy; 2025 <i>STNET</i> Radio. All rights reserved.</p>
+    <p>&copy; 2025 <b><i>STNET</i> Radio.</b> rights reserved.</p>
     <p><a href="https://docs.stnetradio.com/privacy-policy" style="color: #333; text-decoration: underline;">Privacy Policy</a> | <a href="https://docs.stnetradio.com/terms-of-service" style="color: #333; text-decoration: underline;">Terms of Service</a></p>
   </footer>
 </body>
