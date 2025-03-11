@@ -6,191 +6,194 @@
   <title>Page Not Found | STNET Radio</title>
   <link rel="icon" href="https://s3.ap-southeast-1.amazonaws.com/files.stnetradio.com/logo/fav.ico" type="image/x-icon">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
-    
-    * {margin: 0; padding: 0; box-sizing: border-box;}
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     
     body {
-      font-family: 'Poppins', system-ui, sans-serif;
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.4;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
+    }
+    
+    header {
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      background-color: #fafafa;
+      flex-wrap: wrap;
+    }
+    
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 1000;
       color: #333;
-      padding: 1rem;
-      line-height: 1.6;
-      background: linear-gradient(135deg, #fff 0%, #f5f5f5 100%);
-    }
-    
-    .container {
-      width: 100%;
-      max-width: 600px;
-      padding: 2rem 1.5rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      background-color: #fff;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .container::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, #ff0000, #ff6b6b);
-    }
-    
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: #ff0000;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: -1px;
-      text-shadow: 1px 1px 0px rgba(255,0,0,0.1);
-    }
-    
-    p {
-      margin-bottom: 1.5rem;
-      color: #555;
-      font-size: 1rem;
-    }
-    
-    .btn {
-      display: block;
-      width: 100%;
-      max-width: 280px;
-      margin: 0 auto;
-      padding: 0.9rem 1.5rem;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-transform: uppercase;
+      margin: 0.5rem 0;
       text-decoration: none;
-      border-radius: 50px;
-      background: linear-gradient(90deg, #ff0000, #ff5050);
-      color: #fff;
-      border: none;
-      letter-spacing: 1px;
-      box-shadow: 0 4px 15px rgba(255,0,0,0.2);
-      transition: all 0.3s;
     }
     
-    .btn:hover, .btn:active {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(255,0,0,0.3);
+    nav ul {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
     }
     
-    .btn:active {
-      transform: translateY(0);
+    nav li {
+      margin-left: 1.5rem;
+      margin: 0.5rem 0.75rem;
     }
     
-    .small {
-      font-size: 0.8rem;
-      color: #888;
-      margin-top: 1rem;
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
     }
     
-    footer {
-      margin-top: 2rem;
-      padding: 1rem 0;
-      font-size: 0.85rem;
+    nav a:hover {
+      color: #555;
+    }
+    
+    .banner {
+      background-color: #f5f5f5;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .banner p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
       color: #666;
-      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
     
-    footer span {font-weight: 600;}
-    footer .italic {font-style: italic;}
-    
-    /* Animation */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    .banner-btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      margin: 0.5rem 6px;
+      background: #fff;
+      color: #333;
+      border: 0px solid #ddd;
+      border-radius: 4px;
+      transition: background 0.3s;
     }
     
-    .container {
-      animation: fadeIn 0.6s ease-out forwards;
+    .banner-btn:hover {
+      background: #eaeaea;
     }
     
-    /* Media queries for larger screens */
-    @media screen and (min-width: 480px) {
-      .container {
-        padding: 2.5rem;
-      }
-      
-      h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1.25rem;
-      }
-      
-      p {
-        font-size: 1.1rem;
-      }
-      
-      .btn {
-        padding: 0.9rem 2rem;
-        font-size: 1rem;
-      }
+    .hero {
+      padding: 3rem 1.5rem;
+      text-align: center;
+      flex: 1;
     }
     
-    @media screen and (min-width: 768px) {
-      body {
-        padding: 2rem;
-      }
-      
-      .container {
-        padding: 3rem;
-      }
-      
-      h1 {
-        font-size: 4rem;
-        letter-spacing: -2px;
-      }
-      
-      .container::before {
-        height: 6px;
-      }
+    .hero h1 {
+      font-weight: bolder;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
     }
     
-    /* Dark mode */
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-        color: #f5f5f5;
+    .hero p {
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 1.2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .hero-btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      margin-top: 1rem;
+      background: #f5f5f5;
+      color: #333;
+      border: 0px solid #ddd;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    
+    .hero-btn:hover {
+      background: #eaeaea;
+    }
+
+    footer {
+      padding: 1.5rem 1rem;
+      background-color: #fff;
+      color: #333;
+      text-align: center;
+      border-top: 1px solid #eee;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      header {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
       
-      .container {
-        background-color: #222;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      nav ul {
+        margin-top: 1rem;
+        justify-content: center;
       }
       
-      p {color: #ddd;}
-      
-      .btn {
-        background: linear-gradient(90deg, #ff3333, #ff6666);
+      .hero h1 {
+        font-size: 1.8rem;
       }
       
-      .small {color: #bbb;}
+      .hero {
+        padding: 2rem 1rem;
+      }
       
-      footer {color: #aaa;}
+      .banner p {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Not Found</h1>
+  <section class="banner">
+    <p>This is a demo page. <a href="https://stnetradio.com" class="banner-btn">Go to Official Website</a></p> 
+  </section>
+
+  <header>
+    <a href="https://stnetradio.com" class="brand"> STNET Radio </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="https://stnetradio.com">About</a></li>
+        <li><a href="https://support.stnetradio.com">Support</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section class="hero">
+    <h1>Page Not Found</h1>
     <p>We apologize, but the requested page cannot be found or the questionnaire is currently unavailable.</p>
-    <a href="https://stnetradio.com" class="btn">Return to Homepage</a>
-    <p class="small">You will be redirected to the official STNET Radio website</p>
-  </div>
+    <p>This page may have been moved or deleted. If you typed the URL directly, please make sure the spelling is correct.</p>
+    <a href="https://stnetradio.com" class="hero-btn">Return to Homepage</a>
+  </section>
   
   <footer>
-    © 2025 <span class="italic">STNET</span> <span>Radio</span>. All Rights Reserved.
+    <p>&copy; 2025 <i>STNET</i> Radio. All rights reserved.</p>
+    <p><a href="https://docs.stnetradio.com/privacy-policy" style="color: #333; text-decoration: underline;">Privacy Policy</a> | <a href="https://docs.stnetradio.com/terms-of-service" style="color: #333; text-decoration: underline;">Terms of Service</a></p>
   </footer>
 </body>
 </html>
