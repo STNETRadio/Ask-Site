@@ -2,28 +2,86 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ทำไมคุณถึงอยากเรียนครู? | STNET Radio</title>
   <link rel="icon" href="https://s3.ap-southeast-1.amazonaws.com/files.stnetradio.com/logo/fav.ico" type="image/x-icon">
-  <!-- Link Google Fonts -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Link External CSS -->
-  <link rel="stylesheet" href="LITALK.css">
+  <style>
+    /* Basic Reset */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: "IBM Plex Sans Thai", serif;
+      background: #fff;
+      color: #333;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Content Section */
+    .content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    
+    /* Tally Embed - Full Page */
+    .tally-embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 80px);
+      border: none;
+    }
+    
+    /* Footer - Fixed Position */
+    footer {
+      background-color: #f5f5f5;
+      color: #666;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.875rem;
+      border-top: 1px solid #ddd;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    
+    footer p {
+      margin: 0;
+    }
+  </style>
   <!-- Tally Embed Script -->
   <script async src="https://tally.so/widgets/embed.js"></script>
+  <script>
+    console.log("Page Loaded");
+    window.addEventListener("load", function() {
+      console.log("Tally embed should now be visible");
+    });
+  </script>
 </head>
 <body>
-  <!-- Tally Embed -->
-  <iframe 
-    data-tally-src="https://tally.so/r/mVoB5a?transparentBackground=1" 
-    title="ทำไมคุณถึงอยากเรียนครู?">
-  </iframe>
-
+  <!-- Content Section with Tally Embed -->
+  <section class="content">
+    <iframe class="tally-embed" 
+      src="https://tally.so/r/mVoB5a?transparentBackground=1" 
+      title="ทำไมถึงอยากเป็นครู?"
+      onload="console.log('Tally embed loaded successfully')">
+    </iframe>
+  </section>
+  
   <!-- Footer -->
-  <div class="footer">
-    แบบสอบถามนี้เป็นส่วนหนึ่งของ <span>STNET Radio Entertainment</span> และ <span>Soaqer Studio</span>
-  </div>
+  <footer>
+    <p>แบบสอบถามนี้เป็นส่วนหนึ่งของ</p>
+      <b>STNET Radio Entertainment</b> และ <b>Soaqer Studio</b>
+  </footer>
 </body>
 </html>
