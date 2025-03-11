@@ -5,23 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ทำไมคุณถึงอยากเรียนครู? | STNET Radio</title>
   <link rel="icon" href="https://s3.ap-southeast-1.amazonaws.com/files.stnetradio.com/logo/fav.ico" type="image/x-icon">
+  
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     /* Basic Reset */
     html, body {
       margin: 0;
       padding: 0;
-      font-family: "IBM Plex Sans Thai", serif;
+      font-family: "IBM Plex Sans Thai", sans-serif;
       background: #fff;
       color: #333;
       height: 100%;
       display: flex;
       flex-direction: column;
     }
-    
+
     /* Content Section */
     .content {
       flex: 1;
@@ -30,17 +32,18 @@
       align-items: center;
       position: relative;
     }
-    
+
     /* Tally Embed - Full Page */
     .tally-embed {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: calc(100% - 80px);
+      height: calc(100vh - 80px);
+      max-height: 100vh;
       border: none;
     }
-    
+
     /* Footer - Fixed Position */
     footer {
       background-color: #f5f5f5;
@@ -49,22 +52,26 @@
       padding: 1rem 0;
       font-size: 0.875rem;
       border-top: 1px solid #ddd;
-      position: fixed;
+      position: relative;
       bottom: 0;
       left: 0;
       width: 100%;
     }
-    
+
     footer p {
       margin: 0;
     }
   </style>
+
   <!-- Tally Embed Script -->
   <script async src="https://tally.so/widgets/embed.js"></script>
   <script>
-    console.log("Page Loaded");
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log("Page content has loaded");
+    });
+
     window.addEventListener("load", function() {
-      console.log("Tally embed should now be visible");
+        console.log("Tally embed should now be visible");
     });
   </script>
 </head>
@@ -81,7 +88,7 @@
   <!-- Footer -->
   <footer>
     <p>แบบสอบถามนี้เป็นส่วนหนึ่งของ</p>
-      <b>STNET Radio Entertainment</b> และ <b>Soaqer Studio</b>
+    <b>STNET Radio Entertainment</b> และ <b>Soaqer Studio</b>
   </footer>
 </body>
 </html>
