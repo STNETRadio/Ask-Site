@@ -23,7 +23,7 @@
 
     @keyframes banner {
       from {background-color: #333;}
-      to {background-color: #ddd;}
+      to {background-color: #e4e4e4;}
     }
     .banner p {
       font-size: 0.75rem;
