@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ทำไมคุณถึงอยากเรียนครู? | STNET Radio</title>
   <link rel="icon" href="https://s3.ap-southeast-1.amazonaws.com/files.stnetradio.com/logo/fav.ico" type="image/x-icon">
-  
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
   <style>
     /* Basic Reset */
@@ -43,6 +42,23 @@
       max-height: 100vh;
       border: none;
     }
+
+    .fppter {
+      text-align: center;
+      flex-wrap: wrap;
+    }
+    .footer-eng {
+      font-family: "Source Sans 3", sans-serif;
+      font-weight: bold;
+      flex-wrap: wrap;
+    }
+
+    .footer-thai {
+      font-family: "IBM Plex Sans Thai", sans-serif;
+      font-size: 0.875rem;
+      font-weight: 400;
+      flex-wrap: wrap;
+      }
 
     /* Footer - Fixed Position */
     footer {
@@ -88,7 +104,7 @@
   <!-- Footer -->
   <footer>
     <p>แบบสอบถามนี้เป็นส่วนหนึ่งของ</p>
-    <b>STNET Radio Entertainment</b> และ <b>Soaqer Studio</b>
+    <p class="footer-eng">STNET Radio Entertainment <span class="footer-thai">และ</span> Soaqer Studio</p>
   </footer>
 </body>
 </html>
