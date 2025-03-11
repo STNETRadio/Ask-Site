@@ -17,7 +17,7 @@
       text-align: center;
       border-bottom: 1px solid #eee;
       animation-name: banner;
-      animation-duration: 5s;
+      animation-duration: 3.5s;
       animation-fill-mode: forwards;
     }
 
@@ -61,6 +61,14 @@
     .banner-li {
       color: #4476ff;
       text-decoration: none;
+      animation-name: banner-li;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes banner-li {
+      from {color: #4476ff;}
+      to {color: #003ada;}
     }
     
     .hero {
