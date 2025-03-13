@@ -5,69 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>แบบสอบถามข้อมูลส่วนตัวนักเรียน | English Education LRU</title>
   <link rel="icon" href="https://s3.ap-southeast-1.amazonaws.com/files.stnetradio.com/logo/ENGEDLOGO.ico" type="image/x-icon">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    /* Basic Reset */
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: "IBM Plex Sans Thai", serif;
-      background: #fff;
-      color: #333;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    /* Content Section */
-    .content {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-    
-    /* Tally Embed - Full Page */
-    .tally-embed {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: calc(100% - 70px);
-      border: none;
-    }
-    
-    /* Footer - Fixed Position */
-    footer {
-      background-color: #f5f5f5;
-      color: #666;
-      text-align: center;
-      padding: 1rem 0;
-      font-size: 0.875rem;
-      border-top: 1px solid #ddd;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
-    
-    footer p {
-      margin: 0;
-    }
-  </style>
-  <!-- Tally Embed Script -->
-  <script async src="https://tally.so/widgets/embed.js"></script>
-  <script>
-    console.log("Page Loaded");
-    window.addEventListener("load", function() {
-      console.log("Tally embed should now be visible");
-    });
-  </script>
+  <link rel="stylesheet" href="/css/form.css">
 </head>
 <body>
   <!-- Content Section with Tally Embed -->
@@ -84,5 +22,7 @@
     <b>คุณสามารถเข้าถึงหน้านี้จนถึงวันที่ 30 มีนาคม 2568 เวลา 00:00 น.</b>
     <p>ขอบคุณที่ให้ความร่วมมือ</p>
   </footer>
+  
+  <script src="/javascript/tally.js"></script>
 </body>
 </html>

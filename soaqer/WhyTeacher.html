@@ -5,93 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ทำไมคุณถึงอยากเรียนครู? | STNET Radio</title>
   <link rel="icon" href="https://s3.ap-southeast-1.amazonaws.com/files.stnetradio.com/logo/fav.ico" type="image/x-icon">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-
-  <style>
-    /* Basic Reset */
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: "IBM Plex Sans Thai", sans-serif;
-      background: #fff;
-      color: #333;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Content Section */
-    .content {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    /* Tally Embed - Full Page */
-    .tally-embed {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: calc(100% - 80px);
-      border: none;
-    }
-
-    .fppter {
-      text-align: center;
-      flex-wrap: wrap;
-    }
-    .footer-eng {
-      font-family: "Source Sans 3", sans-serif;
-      font-weight: bold;
-      flex-wrap: wrap;
-    }
-
-    .footer-thai {
-      font-family: "IBM Plex Sans Thai", sans-serif;
-      font-size: 0.875rem;
-      font-weight: 400;
-      flex-wrap: wrap;
-      }
-
-    /* Footer - Fixed Position */
-    footer {
-      background-color: #f5f5f5;
-      color: #666;
-      text-align: center;
-      padding: 1rem 0;
-      font-size: 0.875rem;
-      border-top: 1px solid #ddd;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
-
-    footer p {
-      margin: 0;
-    }
-  </style>
-
-  <!-- Tally Embed Script -->
-  <script async src="https://tally.so/widgets/embed.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        console.log("Page content has loaded");
-    });
-
-    window.addEventListener("load", function() {
-        console.log("Tally embed should now be visible");
-    });
-  </script>
+  <link rel="stylesheet" href="/CSS/form.css">
 </head>
 <body>
-  <!-- Content Section with Tally Embed -->
   <section class="content">
     <iframe class="tally-embed" 
       src="https://tally.so/r/mVoB5a?transparentBackground=1" 
@@ -100,10 +16,11 @@
     </iframe>
   </section>
   
-  <!-- Footer -->
   <footer>
     <p>แบบสอบถามนี้เป็นส่วนหนึ่งของ</p>
     <p class="footer-eng">STNET Radio Entertainment <span class="footer-thai">และ</span> Soaqer Studio</p>
   </footer>
+
+  <script src="/javascript/tally.js"></script>
 </body>
 </html>
