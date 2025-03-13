@@ -6,7 +6,7 @@
     <title>Redirecting... | STNET Radio</title>
     <link rel="icon" href="https://s3.ap-southeast-1.amazonaws.com/files.stnetradio.com/logo/fav.ico" type="image/x-icon">
     <link rel="stylesheet" href="/CSS/404.css">
-    <link rel="stylesheet" href="/CSS/banner.css">
+    <link rel="stylesheet" href="/CSS/brand.css">
     <link rel="stylesheet" href="/CSS/footer.css">
     <link rel="stylesheet" href="/CSS/thai.css">
 </head>
@@ -18,6 +18,7 @@
             <li><a href="https://ask.stnetradio.com">Home</a></li>
             <li><a href="https://stnetradio.com">About</a></li>
             <li><a href="https://support.stnetradio.com">Support</a></li>
+            <li><a href="https://tally.so/login">Login</a></li>
           </ul>
         </nav>
     </header>
@@ -27,35 +28,31 @@
     </section>
     
     <section class="hero">
-        <h1 style="font-size: 1.5rem; margin-bottom: 0rem;">Redirecting you to questionnaire page</h1>
-        <h1 id="countdown" style="font-size: 1rem; margin-top: 0rem; font-weight: lighter;">in 3 seconds.</h1>
+        <h1>Redirecting you to questionnaire page</h1>
+        <p id="countdown" style="font-size: 1rem; margin-top: 0rem; font-weight: lighter; color: #ff0000;">Redirecting in 5 seconds.</p>
         <p>We apologize, The requested page has been moved.</p>
-        <p>You will be redirected to the destination page. If you have not been redirected, please select the button.</p>
         <a href="/soaqer/whyteacher.html" class="hero-btn">Redirect to <span class="thai">ทำไมคุณถึงอยากเป็นครู?</span> Questionnaire</a>
     </section>
 
     <script>
-        let timeLeft = 3;
+        let timeLeft = 6;
         const countdownElement = document.getElementById("countdown");
 
         const timer = setInterval(() => {
             timeLeft--;
-            countdownElement.textContent = `in ${timeLeft} seconds.`;
+            countdownElement.textContent = `Redirecting in ${timeLeft} seconds.`;
 
             if (timeLeft <= 0) {
                 clearInterval(timer);
-                countdownElement.textContent = "The system is Redirecting you to a new page...";
-                window.location.href = "/soaqer/whyteacher.html";
+                countdownElement.textContent = "The system is redirecting you to a new page...";
+                window.location.href = "https://ask.stnetradio.com/soaqer/whyteacher";
             }
         }, 1000);
     </script>
 
-    <footer>
-        <p>&copy; 2025 <b><i>STNET</i> Radio.</b> All Rights Reserved.</p>
-        <p class="st-link">
-            <a href="https://docs.stnetradio.com/privacy-policy" class="st-link">Privacy Policy</a> | 
-            <a href="https://docs.stnetradio.com/terms-of-service" class="st-link">Terms of Service</a>
-        </p>
-    </footer>
+<footer>
+    <p>&copy; 2025 <span class="copyright"><i>STNET</i> Radio. </span> All Rights Reserved.</p>
+    <p class="st-link"><a href="https://docs.stnetradio.com/privacy-policy" class="st-link" > Privacy Policy</a> | <a href="https://docs.stnetradio.com/terms-of-service" class="st-link">Terms of Service</a></link>
+  </footer>
 </body>
 </html>

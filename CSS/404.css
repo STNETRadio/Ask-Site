@@ -1,93 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-* { margin: 0; padding: 0; box-sizing: border-box; }
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 300;
   background: #fff;
   color: #333;
-  line-height: 1.4;
+  line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+/* Banner section */
 .banner {
   background-color: #333;
-  padding: 1rem;
+  padding: 1.25rem 1rem;
   text-align: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #444;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .banner p {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 400;
   word-wrap: break-word;
-  color: #eee;
+  color: #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .banner-btn {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.25rem;
   text-decoration: none;
   margin: 0.5rem 6px;
   background: #fff;
   color: #333;
-  border: 0px solid #ddd;
+  border: none;
   border-radius: 4px;
-  transition: background 0.3s;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .banner-btn:hover {
-  background: #eaeaea;
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
+/* Hero section */
 .hero {
-  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
   text-align: center;
   flex: 1;
+  border: none;
+  background-color: #ffffff;
 }
 
 .hero h1 {
   color: #ff0000;
   text-transform: uppercase;
-  font-weight: bolder;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
+  font-weight: 700;
+  font-size: 2.75rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
 }
 
+.hero h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #6a6a6a;
+}
 
 .hero p {
-  font-size: 1rem;
+  font-size: 1.125rem;
   text-align: center;
-  margin-bottom: 1.2rem;
-  max-width: 550px;
+  margin-bottom: 1rem;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
   word-wrap: break-word;
+  color: #555;
+  line-height: 1.7;
 }
 
 .hero-btn {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   text-decoration: none;
   margin-top: 1rem;
   background: #000;
-  color: #f5f5f5;
-  border: 0px solid #ddd;
-  border-radius: 10px;
-  transition: background 0.3s;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-btn:hover {
-  background: #eaeaea;
-  color: #000;
+  background: #333;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 600px) {
+/* Responsive styles */
+@media screen and (max-width: 768px) {
   header {
     padding: 1rem;
     flex-direction: column;
@@ -101,14 +143,32 @@ body {
   }
   
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
   }
   
   .hero {
-    padding: 2rem 1rem;
+    padding: 3rem 1.5rem;
   }
-  
+}
+
+@media screen and (max-width: 600px) {
   .banner p {
     flex-direction: column;
+  }
+  
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  
+  .hero {
+    padding: 2.5rem 1rem;
+  }
+  
+  .hero-btn {
+    padding: 0.6rem 1.25rem;
   }
 }
