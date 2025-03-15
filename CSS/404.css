@@ -70,6 +70,7 @@ body {
   flex: 1;
   border: none;
   background-color: #ffffff;
+  min-height: 1000px;
 }
 
 .hero h1 {
