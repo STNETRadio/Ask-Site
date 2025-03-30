@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Source+Sans+3:wght@200..900&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
+    @font-face {
+      font-family: 'Chillax-Variable';
+      src: url('/fonts/Chillax-Variable.woff2') format('woff2'),
+           url('/fonts/Chillax-Variable.woff') format('woff'),
+           url('/fonts/Chillax-Variable.ttf') format('truetype');
+    }
+
     body {
-      font-family: "Sorce Sans 3", sans-serif;
+      font-family: 'Chillax-Variable';
       background: #fff;
       color: #333;
       font-weight: 300;
@@ -116,6 +123,7 @@
 }
 
     .hero p {
+      font-weight: 400;
       font-size: 1rem;
       text-align: center;
       margin-bottom: 1.2rem;
@@ -143,6 +151,7 @@
       }
       
       .hero {
+        min-height: 400px;
         padding: 2rem 1rem;
       }
       

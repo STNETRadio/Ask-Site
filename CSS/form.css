@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Source+Sans+3:wght@200..900&display=swap');
 
+@font-face {
+  font-family: 'Chillax-Variable';
+  src: url('https://stnetradio.com/fonts/Chillax-Variable.woff2') format('woff2'),
+       url('https://stnetradio.com/fonts/Chillax-Variable.woff') format('woff'),
+       url('https://stnetradio.com/fonts/Chillax-Variable.ttf') format('truetype');
+}
+
   /* Basic Reset */
   html, body {
     margin: 0;
@@ -36,7 +43,7 @@
     flex-wrap: wrap;
   }
   .footer-eng {
-    font-family: "Source Sans 3", sans-serif;
+    font-family: 'Chillax-Variable';
     font-weight: bold;
     flex-wrap: wrap;
   }
