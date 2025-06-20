@@ -1,58 +1,141 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting... | STNET Radio</title>
-    <link rel="icon" href="https://stnetradio.com/img/fav.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/CSS/404.css">
-    <link rel="stylesheet" href="/CSS/brand.css">
-    <link rel="stylesheet" href="/CSS/footer.css">
-    <link rel="stylesheet" href="/CSS/thai.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting... | STNET Radio</title>
+  <link rel="icon" href="https://stnetradio.com/img/fav.ico" type="image/x-icon" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Source+Sans+3:wght@200..900&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @font-face {
+      font-family: 'Chillax-Variable';
+      src: url('https://stnetradio.com/fonts/Chillax-Variable.woff2') format('woff2'),
+           url('https://stnetradio.com/fonts/Chillax-Variable.woff') format('woff'),
+           url('https://stnetradio.com/fonts/Chillax-Variable.ttf') format('truetype');
+    }
+
+    body {
+      font-family: 'Chillax-Variable', sans-serif;
+      background-color: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+    }
+
+    h1 {
+      color: #333;
+      margin-top: 0;
+    }
+
+    p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .redirect-url {
+      color: red;
+      font-weight: normal;
+      word-break: break-all;
+    }
+
+    .progress-container {
+      background-color: #ddd;
+      border-radius: 10px;
+      height: 8px;
+      margin-top: 20px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      background-color: red;
+      height: 100%;
+      width: 0%;
+      transition: width 5s linear;
+    }
+
+    .timer {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: all 0.3s;
+    }
+
+    .button:hover {
+      font-weight: 600;
+      background-color: black;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <a href="https://stnetradio.com" class="brand"> STNET Radio </a>
-        <nav>
-          <ul>
-            <li><a href="https://ask.stnetradio.com">Home</a></li>
-            <li><a href="https://stnetradio.com">About</a></li>
-            <li><a href="https://support.stnetradio.com">Support</a></li>
-            <li><a href="https://tally.so/login">Login</a></li>
-          </ul>
-        </nav>
-    </header>
-      
-    <section class="banner">
-        <p>This page is under TEST. It may encounter some errors.</p>
-    </section>
-    
-    <section class="hero">
-        <h1>Redirecting you to questionnaire page</h1>
-        <p id="countdown" style="font-size: 1rem; margin-top: 0rem; font-weight: lighter; color: #ff0000;">Redirecting in 5 seconds.</p>
-        <p>We apologize, The requested page has been moved.</p>
-        <a href="/soaqer/whyteacher.html" class="hero-btn">Redirect to <span class="thai">ทำไมคุณถึงอยากเป็นครู?</span> Questionnaire</a>
-    </section>
+  <div class="container">
+    <h1>Redirecting</h1>
+    <p>You will be redirected soon.</p>
+    <p class="redirect-url" id="redirectUrl"></p>
 
-    <script>
-        let timeLeft = 6;
-        const countdownElement = document.getElementById("countdown");
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
 
-        const timer = setInterval(() => {
-            timeLeft--;
-            countdownElement.textContent = `Redirecting in ${timeLeft} seconds.`;
+    <div class="timer" id="timer">Redirecting in 5 seconds...</div>
+    <a href="#" class="button" id="redirectNow">Redirect Now</a>
+  </div>
 
-            if (timeLeft <= 0) {
-                clearInterval(timer);
-                countdownElement.textContent = "The system is redirecting you to a new page...";
-                window.location.href = "https://ask.stnetradio.com/soaqer/whyteacher";
-            }
-        }, 1000);
-    </script>
+  <script>
+    const targetUrl = "https://ask.stnetradio.com/litalk/whyteacher";
+    const redirectDelay = 5;
 
-<footer>
-    <p>&copy; 2025 <span class="copyright"><i>STNET</i> Radio. </span> All Rights Reserved.</p>
-    <p class="st-link"><a href="https://docs.stnetradio.com/privacy-policy" class="st-link" > Privacy Policy</a> | <a href="https://docs.stnetradio.com/terms-of-service" class="st-link">Terms of Service</a></link>
-  </footer>
+    document.getElementById("redirectUrl").textContent = targetUrl;
+
+    const progressBar = document.getElementById("progressBar");
+    progressBar.style.width = "100%";
+
+    const timerElement = document.getElementById("timer");
+    let secondsLeft = redirectDelay;
+
+    const countdownInterval = setInterval(() => {
+      secondsLeft--;
+      if (secondsLeft <= 0) {
+        clearInterval(countdownInterval);
+        window.location.href = targetUrl;
+      } else {
+        timerElement.textContent = `Redirecting in ${secondsLeft} second${secondsLeft !== 1 ? 's' : ''}...`;
+      }
+    }, 1000);
+
+    document.getElementById("redirectNow").addEventListener("click", (e) => {
+      e.preventDefault();
+      clearInterval(countdownInterval);
+      window.location.href = targetUrl;
+    });
+
+    document.getElementById("redirectNow").href = targetUrl;
+  </script>
 </body>
 </html>
