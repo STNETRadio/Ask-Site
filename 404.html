@@ -3,19 +3,430 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found | STNET Radio</title>
-  <link rel="icon" href="https://s3.ap-southeast-1.amazonaws.com/files.stnetradio.com/logo/fav.ico" type="image/x-icon">
-  <link rel="stylesheet" href="/CSS/404.css">
-  <link rel="stylesheet" href="/CSS/brand.css">
-  <link rel="stylesheet" href="/CSS/footer.css">
+  <meta name="color-scheme" content="light dark">
+  <title>404 Not Found | STNET Radio</title>
+  <link rel="icon" href="https://stnetradio.com/img/fav.ico" type="image/x-icon">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+@font-face {
+  font-family: 'Chillax-Variable';
+  src: url('https://stnetradio.com/fonts/Chillax-Variable.woff2') format('woff2'),
+       url('https://stnetradio.com/fonts/Chillax-Variable.woff') format('woff'),
+       url('https://stnetradio.com/fonts/Chillax-Variable.ttf') format('truetype');
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brand: #D10000;
+  --ink: #1d1d1f;
+  --muted: #6b7280;
+  --bg: #fafafa;
+  --card: #ffffff;
+  --radius: 16px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 8px 30px rgba(0,0,0,.08);
+  --space-hero: clamp(2rem, 6vw, 6rem);
+  --space-hero-blank: clamp(1.25rem, 4vw, 3rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e5e7eb;
+    --muted: #9ca3af;
+    --bg: #0b0b0c;
+    --card: #111113;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.3);
+    --shadow-md: 0 10px 35px rgba(0,0,0,.45);
+  }
+}
+
+.visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+/* Header styles */
+header {
+  font-family: "Chillax-Variable", sans-serif;
+  font-weight: 300;
+  position: sticky;
+  width: max;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0.5rem 0;
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: #ff0000;
+  transition: color 0.5s;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0.5rem 0.75rem;
+}
+
+nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.25rem 0;
+  position: relative;
+}
+
+nav a:hover {
+  font-weight: 800;
+  color: #ff0000;
+  transition: all 0.6s;
+}
+
+/* Add underline animation to nav links */
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff0000;
+  transition: width 0.6s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+}
+
+  @media (prefers-color-scheme: dark) {
+
+    header {
+      background-image: linear-gradient(to bottom right,rgb(62, 1, 1),black 99%);
+      border-bottom: none;
+    }
+
+    .brand {
+      color: white;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+      border: 0px solid;
+      border-radius: 12px;
+    }
+
+    .brand:hover {
+      color: white;
+      text-shadow: -2px 1px 20px red;
+      transition: 0.7s;
+    }
+
+    nav a {
+      color: white;
+    }
+
+    nav a:hover {
+      text-shadow: 1px -1px 20px red;
+    }
+  }
+
+      body {
+      font-family: 'Chillax-Variable';
+      background: var(--bg);
+      color: var(--ink);
+      color-scheme: light dark;
+      font-weight: 300;
+      line-height: 1.4;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .banner {
+      background: linear-gradient(180deg, #ffffff 0%, #f6f6f6 100%);
+      padding: 1rem 1.25rem;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .banner p {
+      text-transform: none;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--ink);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .banner-btn {
+      display: inline-block;
+      padding: 0.2rem .4rem;
+      text-decoration: none;
+      margin: 0.5rem 6px;
+      background: #333;
+      color: #fff;
+      border: px solid #ddd;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    
+    .banner-btn:hover {
+      background: #eaeaea;
+    }
+    
+    .banner-li {
+      color: var(--brand);
+      text-decoration: none;
+      border: 1px solid rgba(209,0,0,.15);
+      padding: .25rem .6rem;
+      border-radius: 999px;
+      transition: transform .2s ease, background .2s ease;
+      background: rgba(209,0,0,.06);
+    }
+    .banner-li:hover { transform: translateY(-1px); background: rgba(209,0,0,.12); }
+    
+    .hero {
+      display: grid;
+      place-items: center;
+      padding: 6rem 1.25rem;
+      text-align: center;
+      flex: 1;
+      background: radial-gradient(1200px 500px at 50% -10%, rgba(209,0,0,.08), transparent 60%),
+                  radial-gradient(800px 400px at 90% 10%, rgba(0,0,0,.05), transparent 60%),
+                  #ffffff;
+      min-height: 60vh;
+      margin-bottom: var(--space-hero);
+    }
+
+    .hero .card {
+      background: var(--card);
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      max-width: 720px;
+      width: min(92%, 720px);
+      padding: clamp(1.25rem, 3vw, 2rem);
+    }
+    .kicker {
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--brand);
+      font-weight: 600;
+      margin-bottom: .5rem;
+      font-size: .85rem;
+    }
+    .hero h1 {
+      font-weight: 800;
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      margin-bottom: .75rem;
+      color: var(--ink);
+    }
+    .muted { color: var(--muted); }
+    .actions { margin-top: 1rem; display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
+    .btn { display:inline-block; padding:.6rem .9rem; border-radius:10px; text-decoration:none; font-weight:600; border:1px solid rgba(0,0,0,.1); transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+    .btn-primary { background: var(--brand); color:#fff; border-color: rgba(209,0,0,.6); }
+    .btn-ghost { background: #fff; color: var(--ink); }
+
+    .hero p {
+      font-weight: 400;
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 1.2rem;
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+      word-wrap: break-word;
+    }
+    
+    @media screen and (max-width: 600px) {
+      :root { --space-hero: clamp(1.25rem, 6vw, 2.5rem); --space-hero-blank: clamp(0.75rem, 4vw, 1.5rem); }
+      header {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .hero {
+        min-height: 400px;
+        padding: 2rem 1rem;
+        margin-bottom: var(--space-hero);
+      }
+      
+      .banner p {
+        flex-direction: column;
+      }
+    }
+footer {
+  font-family: "Chillax-Variable", sans-serif;
+  font-optical-sizing: auto;
+  font-variant: normal;
+  font-weight: 400;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background-color: #f5f5f5;
+  color: #a6a5a5;
+  text-align: center;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+footer .copyright {
+  font-weight: 700;
+  color: #333;
+}
+
+footer .social-links {
+  margin: 1.25rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+footer .social-links a {
+  text-decoration: none;
+  color: #555;  /* Changed from white for better visibility on light background */
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+footer .social-links a:hover {
+  color: #333;  /* Darker on hover for better visibility */
+  transform: translateY(-2px);
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+footer .st-link {
+  color: #a6a5a5;
+  text-decoration: none;
+  padding-bottom: 1px;
+}
+
+footer .st-link:hover {
+  color: #666;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+/* Unified dark mode component overrides */
+@media (prefers-color-scheme: dark) {
+  header {
+    background-color: #0e0e10;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    box-shadow: none;
+  }
+  .brand { color: var(--ink); }
+  .brand:hover { color: #fff; text-shadow: 0 0 0 transparent; }
+  nav a { color: var(--ink); }
+  nav a::after { background-color: var(--brand); }
+
+  .banner {
+    background: linear-gradient(180deg, #121214 0%, #0f0f10 100%);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .banner-btn { background:#1c1c1f; color:#fff; border-color: rgba(255,255,255,.15); }
+  .banner-btn:hover { background:#232327; }
+  .banner-li { background: rgba(209,0,0,.18); border-color: rgba(209,0,0,.35); }
+  .banner-li:hover { background: rgba(209,0,0,.28); }
+
+  .hero {
+    background: radial-gradient(1200px 500px at 50% -10%, rgba(209,0,0,.18), transparent 60%),
+                radial-gradient(800px 400px at 90% 10%, rgba(255,255,255,.06), transparent 60%),
+                #0b0b0c;
+  }
+  .hero .card { border-color: rgba(255,255,255,.08); box-shadow: var(--shadow-md); background: var(--card); }
+
+  .btn-ghost { background: transparent; color: var(--ink); border-color: rgba(255,255,255,.18); }
+  .btn-ghost:hover { background: rgba(255,255,255,.06); }
+
+  footer {
+    background-color: #0e0e10;
+    color: var(--muted);
+    border-top: 1px solid rgba(255,255,255,.08);
+  }
+  footer .copyright { color:#fff; }
+  footer .social-links a { color:#9ca3af; }
+  footer .social-links a:hover { color:#fff; }
+  footer .st-link { color:#c9c9c9; }
+  footer .st-link:hover { color:#fff; }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  footer {
+    padding: 1.25rem 0.75rem;
+  }
+  
+  footer .social-links {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+.hero-blank { height: var(--space-hero-blank); }
+  </style>
 </head>
 <body>
-  
   <header>
-    <a href="https://stnetradio.com" class="brand"> STNET Radio </a>
+    <a href="https://stnetradio.com" class="brand">STNET Radio</a>
     <nav>
       <ul>
-        <li><a href="https://ask.stnetradio.com">Home</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="https://stnetradio.com">About</a></li>
         <li><a href="https://support.stnetradio.com">Support</a></li>
         <li><a href="https://tally.so/login">Login</a></li>
@@ -23,19 +434,22 @@
     </nav>
   </header>
   
-  <section class="banner">
-    <p>This page may have been moved or deleted. If you typed the URL directly, please make sure the spelling is correct.</p>
-  </section>
-
   <section class="hero">
-    <h1>Page Not Found</h1>
-    <p>We apologize, the requested page cannot be found or the questionnaire is currently unavailable.</p>
-    <a href="https://ask.stnetradio.com" class="hero-btn">Return to Homepage</a>
+    <div class="card" role="region" aria-labelledby="hero-title">
+      <h1 id="hero-title">Page Not Found</h1>
+      <p>The page you are looking for doesn’t exist or may have been moved.</p>
+      <p class="muted">Check the URL or return to the homepage to continue exploring STNET Radio.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://stnetradio.com">Go Home</a>
+        <a class="btn btn-ghost" href="https://support.stnetradio.com" target="_blank" rel="noopener">Contact Support</a>
+      </div>
+    </div>
   </section>
+  <div class="hero-blank"></div>
   
-    <footer>
-      <p>&copy; 2025 <span class="copyright"><i>STNET</i> Radio. </span> All Rights Reserved.</p>
-      <p class="st-link"><a href="https://docs.stnetradio.com/privacy-policy" class="st-link" > Privacy Policy</a> | <a href="https://docs.stnetradio.com/terms-of-service" class="st-link">Terms of Service</a></p>
-    </footer>
-  </body>
+  <footer>
+    <p>&copy; 2025 <span class="copyright">STNET Radio.</span> All Rights Reserved.</p>
+    <p class="st-link"><a href="https://docs.stnetradio.com/privacy-policy" class="st-link" > Privacy Policy</a> | <a href="https://docs.stnetradio.com/terms-of-service" class="st-link">Terms of Service</a></p>
+  </footer>
+</body>
 </html>
