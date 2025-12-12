@@ -1,138 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Source+Sans+3:wght@200..900&display=swap');
-
-
-@font-face {
-  font-family: 'Chillax-Variable';
-  src: url('https://stnetradio.com/fonts/Chillax-Variable.woff2') format('woff2'),
-       url('https://stnetradio.com/fonts/Chillax-Variable.woff') format('woff'),
-       url('https://stnetradio.com/fonts/Chillax-Variable.ttf') format('truetype');
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Source+Sans+3:wght@200..900&display=swap');
 
 footer {
-  font-family: "Chillax-Variable", sans-serif;
-  font-optical-sizing: auto;
-  font-variant: normal;
-  font-weight: 400;
-  align-items: center;
-  padding: 1.5rem 1rem;
-  background-color: #f5f5f5;
-  color: #a6a5a5;
+  font-family: "Chillax-Variable", "IBM Plex Sans Thai", sans-serif;
+  padding: 4rem 2rem;
+  background-color: var(--bg);
+  color: var(--subtext);
   text-align: center;
-  border-top: 1px solid #eee;
-  font-size: 0.9rem;
-}
-
-footer .copyright {
-  font-weight: 700;
-  color: #333;
+  border: none;
 }
 
 footer .social-links {
-  margin: 1.25rem 0;
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 footer .social-links a {
+  font-weight: 700;
+  color: var(--subtext);
   text-decoration: none;
-  color: #555;  /* Changed from white for better visibility on light background */
-  margin: 0 0.5rem;
   font-size: 1.2rem;
-  transition: color 0.3s ease, transform 0.2s ease;
-  display: inline-block;
+  transition: transform 0.2s;
 }
 
 footer .social-links a:hover {
-  color: #333;  /* Darker on hover for better visibility */
-  transform: translateY(-2px);
+  color: var(--red);
+  transform: scale(1.2);
 }
 
-footer p {
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  line-height: 1.5;
+footer .copyright {
+  font-weight: 600;
+  color: var(--subtext);
+  margin-bottom: 0.5rem;
 }
 
 footer .st-link {
-  color: #a6a5a5;
+  color: var(--subtext);
   text-decoration: none;
-  padding-bottom: 1px;
+  font-size: 0.85rem;
+  margin: 0 0.5rem;
+  opacity: 0.7;
 }
 
 footer .st-link:hover {
-  color: #666;
-  font-weight: 600;
-  transition: 0.5s;
+  color: var(--red);
+  opacity: 1;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 600px) {
-  footer {
-    padding: 1.25rem 0.75rem;
-  }
-  
-  footer .social-links {
-    flex-wrap: wrap;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-
-  footer {
-    font-optical-sizing: auto;
-    font-variant: normal;
-    align-items: center;
-    padding: 1.5rem 1rem;
-    background-color: #080808;
-    color: #ffffff;
-    text-align: center;
-    border-top: 0px;
-    font-size: 0.9rem;
-    cursor: default;
-  }
-  
-  footer .copyright {
-    font-weight: 700;
-    color: #ffff;
-  }
-  
-  footer .social-links {
-    margin: 1.25rem 0;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  
-  footer .social-links a {
-    text-decoration: none;
-    color: #555;
-    margin: 0 0.5rem;
-    font-size: 1.2rem;
-    transition: color 0.3s ease, transform 0.2s ease;
-    display: inline-block;
-  }
-  
-  footer .social-links a:hover {
-    color: #333;
-    transform: translateY(-2px);
-  }
-  
-  footer p {
-    margin-top: 1rem;
-    font-size: 0.85rem;
-    line-height: 1.5;
-  }
-  
-  footer .st-link {
-    color: #ffffff;
-    text-decoration: none;
-    padding-bottom: 1px;
-  }
-  
-  footer .st-link:hover {
-    color: #fff;
-    font-weight: 600;
-  }
-}
+/* Dark mode handled by var(--bg) now */
